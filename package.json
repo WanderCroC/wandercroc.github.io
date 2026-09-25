@@ -1,0 +1,13 @@
+{
+  "name": "chengcheng-wang-academic-website",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Chengcheng Wang | 王成铖 — academic website for GitHub Pages",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "preview": "npm run build && node scripts/preview.mjs"
+  }
+}
