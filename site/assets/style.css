@@ -67,7 +67,8 @@ p { margin-bottom: 1.2rem; }
 .profile { display: grid; grid-template-columns: minmax(360px, 400px) minmax(0, 1fr); gap: 56px; align-items: stretch; text-align: left; width: 100%; }
 .profile-content { min-width: 0; }
 .profile-photo-frame { position: relative; min-width: 0; margin: 0; overflow: hidden; }
-.profile-photo { position: absolute; inset: 0; display: block; height: 100%; width: 100%; object-fit: cover; object-position: 50% 50%; border: 0; margin: 0; background: var(--surface); }
+/* Keep the eye line near the upper third, with the portrait anchored at the bottom. */
+.profile-photo { position: absolute; inset: auto 0 0; display: block; height: 124%; width: 100%; object-fit: cover; object-position: 50% 100%; border: 0; margin: 0; background: var(--surface); }
 .profile h1 { font-size: 2.5rem; margin-bottom: 20px; letter-spacing: -.02em; }
 .welcome { font-size: 1.75rem; font-weight: 700; line-height: 1.25; margin-bottom: 18px; }
 .bio { font-size: 1.125rem; line-height: 1.7; margin: 0 0 22px; }
@@ -133,6 +134,7 @@ p { margin-bottom: 1.2rem; }
 @media (max-width: 640px) and (orientation: portrait) {
   .profile { gap: 24px; }
   .profile-photo-frame { width: min(180px, 100%); aspect-ratio: 1; border-radius: 50%; }
+  .profile-photo { inset: 0; height: 100%; object-position: 50% 84%; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 @media print {
